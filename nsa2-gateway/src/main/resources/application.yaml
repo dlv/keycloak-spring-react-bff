@@ -16,8 +16,6 @@ spring:
               uri: ${NSA2_RESOURCE_SERVER_URI:http://localhost:8082}
               predicates:
                 - "Path=/resource-server/**"
-              # Sem filtros, o Gateway apenas repassa o path exatamente como recebeu.
-              # Ex: /resource-server/blocking/2 vai virar http://localhost:8082/resource-server/blocking/2
 
 logging:
   level:

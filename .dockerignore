@@ -1,0 +1,16 @@
+# Keep unnecessary files and local metadata out of the Docker build context.
+.git
+.gitignore
+.gitattributes
+**/.git
+**/.github
+**/.idea
+**/.vscode
+**/target
+**/*.iml
+**/*.log
+**/.DS_Store
+**/*.md
+**/src/test
+opencode.json
+prd.md

@@ -1,0 +1,21 @@
+services:
+  nsa2-resource-server:
+    build:
+      context: .
+      dockerfile: nsa2-resource-server/Dockerfile
+    restart: unless-stopped
+    # No host port is published; the service is reachable only on the Compose network.
+
+  nsa2-gateway:
+    build:
+      context: .
+      dockerfile: nsa2-gateway/Dockerfile
+    depends_on:
+      - nsa2-resource-server
+    environment:
+      NSA2_RESOURCE_SERVER_URI: http://nsa2-resource-server:8082
+      # No Eureka Server is part of this stack; routing uses direct service DNS.
+      EUREKA_CLIENT_ENABLED: "false"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
