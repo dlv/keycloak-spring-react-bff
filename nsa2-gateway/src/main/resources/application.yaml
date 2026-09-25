@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: nsa2-gateway
+  threads:
+    virtual:
+      enabled: true
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: resource-server
+              uri: ${NSA2_RESOURCE_SERVER_URI:http://localhost:8082}
+              predicates:
+                - "Path=/resource-server/**"
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    io.netty: DEBUG

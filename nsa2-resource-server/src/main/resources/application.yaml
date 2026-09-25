@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: nsa2-resource-server
+
+server:
+  port: 8082

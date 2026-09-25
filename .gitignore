@@ -1,0 +1,150 @@
+# Segredos e configurações locais
+# Arquivos .env reais não devem ser versionados; templates são permitidos.
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.sample
+!.env.*.sample
+!.env.template
+!.env.*.template
+
+# Keystores, certificados privados e chaves. Não versionar material criptográfico.
+*.jks
+*.keystore
+*.truststore
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Credenciais locais de provedores e ferramentas.
+.aws/
+.azure/
+.gcloud/
+**/service-account*.json
+**/gcloud-service-key.json
+**/.m2/settings.xml
+
+# Configurações locais de Spring Boot.
+**/application-local.yml
+**/application-local.yaml
+**/application-local.properties
+
+# Logs e diagnósticos
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Arquivos temporários e de runtime
+*.pid
+*.pid.lock
+*.seed
+*.tmp
+*.swp
+*.swo
+*~
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Artefatos de compilação, testes e empacotamento
+target/
+build/
+out/
+dist/
+coverage/
+.nyc_output/
+*.lcov
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+*.tgz
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+**/.mvn/timing.properties
+**/.mvn/wrapper/maven-wrapper.jar
+
+# Gradle (caso seja adotado em algum módulo)
+.gradle/
+**/gradle-app.setting
+**/.gradletasknamecache
+
+# Node.js / React
+node_modules/
+jspm_packages/
+.npm/
+.pnpm-store/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.cache/
+.parcel-cache/
+.vite/
+.next/
+.nuxt/
+.output/
+.svelte-kit/
+.docusaurus/
+.serverless/
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.node_repl_history
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse / Spring Tool Suite
+.project
+.classpath
+.factorypath
+.settings/
+.springBeans
+.sts4-cache/
+.apt_generated/
+
+# Visual Studio Code
+.vscode/
+
+# NetBeans
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# Erros da JVM
+hs_err_pid*
+replay_pid*
+
+
+# MCPs
+*.mcp/
+opencode.json
